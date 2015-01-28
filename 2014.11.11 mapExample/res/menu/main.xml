@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mapexample.MainActivity" >
+
+    <item
+        android:id="@+id/action_reset"
+        android:orderInCategory="100"
+        android:title="Reset"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/action_1400"
+        android:orderInCategory="100"
+        android:title="1400"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/action_14000"
+        android:orderInCategory="101"
+        android:title="14000"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/action_photos"
+        android:orderInCategory="102"
+        android:title="Photos"
+        app:showAsAction="never"/>
+
+</menu>

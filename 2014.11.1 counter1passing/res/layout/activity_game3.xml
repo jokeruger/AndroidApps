@@ -1,0 +1,276 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.counter1passing.Game3Activity" >
+
+    <TextView
+        android:id="@+id/playerView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="TextView"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/playerView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/player1lifeView"
+        android:layout_centerHorizontal="true"
+        android:text="TextView"
+        android:textSize="21sp" />
+    
+    <TextView
+        android:id="@+id/playerView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/player2lifeView"
+        android:text="TextView"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/player1lifeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerView1"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textSize="142sp" />
+
+    <TextView
+        android:id="@+id/player2lifeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerView2"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textSize="142sp" />
+    
+    <TextView
+        android:id="@+id/player3lifeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerView3"
+        android:layout_centerHorizontal="true"
+        android:text="0"
+        android:textSize="142sp" />
+    
+    <Button
+        android:id="@+id/button20"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Reset"
+        android:onClick="resetLife" />
+    
+    
+    
+    <!-- Player 1 buttons -->
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/player1lifeView"
+        android:layout_toRightOf="@+id/player1lifeView"
+        android:text="    +5   "
+        android:textSize="20sp"
+        android:onClick = "add5player1" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/player1lifeView"
+        android:layout_toLeftOf="@+id/player1lifeView"
+        android:text="    -5   "
+        android:textSize="20sp"
+        android:onClick = "sub5player1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_toRightOf="@+id/player1lifeView"
+        android:text="+1\n"
+        android:textSize="40sp"
+        android:onClick="add1player1" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button3"
+        android:layout_toLeftOf="@+id/player1lifeView"
+        android:text=" -1\n"
+        android:textSize="40sp"
+        android:onClick="sub1player1" />
+    
+    <Button
+        android:id="@+id/button5"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/player1lifeView"
+        android:layout_centerHorizontal="true"
+        android:text="Extort"
+        android:textSize="10sp"
+        android:onClick="player1extort" />
+    
+    
+    
+    <!-- Player 2 buttons -->
+    
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/player2lifeView"
+        android:layout_toRightOf="@+id/player2lifeView"
+        android:text="    +5   "
+        android:textSize="20sp"
+        android:onClick = "add5player2" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/player2lifeView"
+        android:layout_toLeftOf="@+id/player2lifeView"
+        android:text="    -5   "
+        android:textSize="20sp"
+        android:onClick = "sub5player2" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button6"
+        android:layout_toRightOf="@+id/player2lifeView"
+        android:text="+1\n"
+        android:textSize="40sp"
+        android:onClick="add1player2" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button8"
+        android:layout_toLeftOf="@+id/player2lifeView"
+        android:text=" -1\n"
+        android:textSize="40sp"
+        android:onClick="sub1player2" />
+    
+    <Button
+        android:id="@+id/button10"
+        android:layout_below="@+id/button7"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/player2lifeView"
+        android:layout_centerHorizontal="true"
+        android:text="Extort"
+        android:textSize="10sp"
+        android:onClick="player2extort" />
+
+    
+    <!-- Player 3 buttons -->
+    
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/player3lifeView"
+        android:layout_toRightOf="@+id/player3lifeView"
+        android:text="    +5   "
+        android:textSize="20sp"
+        android:onClick = "add5player3" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/player3lifeView"
+        android:layout_toLeftOf="@+id/player3lifeView"
+        android:text="    -5   "
+        android:textSize="20sp"
+        android:onClick = "sub5player3" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button11"
+        android:layout_toRightOf="@+id/player3lifeView"
+        android:text="+1\n"
+        android:textSize="40sp"
+        android:onClick="add1player3" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button13"
+        android:layout_toLeftOf="@+id/player3lifeView"
+        android:text=" -1\n"
+        android:textSize="40sp"
+        android:onClick="sub1player3" />
+    
+    <Button
+        android:id="@+id/button15"
+        android:layout_below="@+id/button7"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/player3lifeView"
+        android:layout_centerHorizontal="true"
+        android:text="Extort"
+        android:textSize="10sp"
+        android:onClick="player3extort" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button20"
+        android:text="Count scores" 
+        android:onClick="countScore"/>
+    
+    <TextView
+        android:id="@+id/textTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="00:00:00" />
+
+    <Button
+        android:id="@+id/btnStart"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textTimer"
+        android:text="Start" />
+
+    <Button
+        android:id="@+id/btnPause"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/textTimer"
+        android:text="Pause" />
+
+</RelativeLayout>
